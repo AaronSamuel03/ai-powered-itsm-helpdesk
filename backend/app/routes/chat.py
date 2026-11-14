@@ -36,9 +36,11 @@ async def chat_endpoint(req: ChatRequest):
     )
 
     status = "Open"
-    if heal["auto_resolved"] and snow_ticket.get("sys_id"):
-        await resolve_servicenow_incident(snow_ticket["sys_id"], heal["remediation_steps"])
+    if heal["auto_resolved"]:
+        if snow_ticket.get("sys_id"):
+            await resolve_servicenow_incident(snow_ticket["sys_id"], heal["remediation_steps"])
         status = "Resolved (Self-Healed)"
+
 
     ticket_doc = {
         "snow_number": snow_ticket.get("number", "INC-LOCAL"),
