@@ -1,4 +1,4 @@
-# NexusIT AI Desk — AI-Powered ITSM Helpdesk Platform
+# AI-Powered ITSM Helpdesk Platform
 
 An end-to-end, AI-driven IT Service Management (ITSM) prototype built with **React.js**, **FastAPI**, **MongoDB Atlas Vector Search**, **Hugging Face open-source LLMs**, and **ServiceNow REST APIs**.
 
